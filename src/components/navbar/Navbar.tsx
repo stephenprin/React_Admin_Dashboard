@@ -5,7 +5,7 @@ import app from '/public/app.svg';
 import expand from '/public/expand.svg';
 import settings from '/public/settings.svg';
 import notifications from '/public/notifications.svg';
-import user from '/public/user.svg';
+
 const Navbar = () => {
   return (
     <div className='navbar'>
