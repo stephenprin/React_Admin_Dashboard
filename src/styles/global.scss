@@ -22,13 +22,13 @@ a {
 .container{
 
   display: flex;
-  gap: 4rem;
+  gap: 2rem;
  
 }
 .menuContainer{
   width: 250px;
   padding: 0.6rem 1rem;
-   border-right: 2px solid $soft-bg;
+  border-right: 2px solid $soft-bg;
 }
 .contentContainer{
   width: 100%;
