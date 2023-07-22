@@ -1,9 +1,15 @@
+@import "../../styles/variables.scss";
+
 .navbar{
+    
     width: 100%;
+ 
+    
     padding: 1.4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid $soft-bg;
 
     .logo{
 

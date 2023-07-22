@@ -20,8 +20,10 @@ a {
 
 
 .container{
+
   display: flex;
   gap: 4rem;
+ 
 }
 .menuContainer{
   width: 250px;
@@ -31,5 +33,5 @@ a {
 .contentContainer{
   width: 100%;
   padding: 0.6rem 1rem;
-  background-color: red;
+  
 }
