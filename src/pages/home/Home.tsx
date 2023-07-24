@@ -4,7 +4,9 @@ import './home.scss'
 import { chartBoxUser } from '../../utils/data'
 import { chartBoxProduct } from '../../utils/data'
 import { chartBoxRevenue } from '../../utils/data'
-import {chartBoxConversion} from '../../utils/data'
+import { chartBoxConversion } from '../../utils/data'
+import {barChartBoxVisit} from '../../utils/data'
+import BarChartBox from '../../components/barChart/BarChart'
 
 const Home = () => {
   return (
@@ -26,8 +28,12 @@ const Home = () => {
       <div className='box box6 chartBox'>
         <ChartBox  {...chartBoxConversion} />
       </div>
-      <div className='box box7'>box7</div>
-      <div className='box box8'>box8</div>
+      <div className='box box7'>
+        7
+      </div>
+      <div className='box box8'>
+      <BarChartBox {...barChartBoxVisit} />
+      </div>
       <div className='box box9'>box9</div>
     </div>
   )
