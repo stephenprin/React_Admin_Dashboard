@@ -1,0 +1,44 @@
+.pieChart{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    h1{
+        font-size: 1.4rem;
+    }
+
+
+    .chart{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    .options{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        font-size: 10px;
+       
+        .option{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+
+            .title{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                .dot{
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+    }
+
+}
