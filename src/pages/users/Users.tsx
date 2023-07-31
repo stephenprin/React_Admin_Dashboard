@@ -4,6 +4,7 @@ import './user.scss';
 import { userRows } from '../../utils/data'
 import { useState } from 'react';
 import Add from '../../components/add/Add';
+import { useQuery } from '@tanstack/react-query';
 
 
 const columns: GridColDef[] = [
@@ -71,7 +72,16 @@ const columns: GridColDef[] = [
 
 
 const Users = () => {
-  const [open, setOpen]= useState(false)
+  const [open, setOpen] = useState(false)
+  
+  const { isLoading, error, data } = useQuery({
+    queryKey: ['allusers'],
+    queryFn: () =>
+      fetch('https://api.github.com/repos/TanStack/query').then(
+        (res) => res.json(),
+      ),
+  })
+
   return (
     <div className="user">
       <div className='info'>
@@ -79,7 +89,7 @@ const Users = () => {
         <button onClick={()=>setOpen(true)}>Add User</button>
         </div>
         <div>
-        <DataTable slug="users" columns={ columns} rows={userRows} />
+        {isLoading?("Loading..."):(  <DataTable slug="users" columns={ columns} rows={data} />)}
         {open && <Add slugs='user' columns={columns} setOpen={setOpen } />}
       </div>
     </div>
