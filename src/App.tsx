@@ -1,5 +1,9 @@
 import Home from "./pages/home/Home"
 import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+import {
   createBrowserRouter,
   RouterProvider,
   Outlet
@@ -15,6 +19,7 @@ import User from "./pages/user/User";
 import Product from "./pages/product/Product";
 
 
+const queryClient = new QueryClient()
 
 const Layout = () => {
   
@@ -28,7 +33,10 @@ const Layout = () => {
             <Menu/>
         </div>
         <div className="contentContainer">
-            <Outlet/>
+          <QueryClientProvider client={queryClient}>
+              <Outlet/>
+        </QueryClientProvider>
+           
         </div>
       </div>
       <Footer/>
